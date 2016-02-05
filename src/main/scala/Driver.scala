@@ -6,11 +6,6 @@ object Driver extends App {
       System.exit(1)
     }
     val lines = scala.io.Source.fromFile(args(0)).mkString
-    Tokenizer.tokenize(lines).foreach( sent => {
-      sent.foreach(tok => {
-        print(tok+" ")
-      })
-      println()
-    })
+    print(Tokenizer.tokenize(lines))
   }
 }
