@@ -6,6 +6,7 @@ object Driver extends App {
       System.exit(1)
     }
     val lines = scala.io.Source.fromFile(args(0)).mkString
-    print(Tokenizer.tokenize(lines))
+    val sentences = Tokenizer.tokenize(lines)
+    val rich = sentences.map(Semantic.analyze)
   }
 }

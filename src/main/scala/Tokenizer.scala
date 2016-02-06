@@ -1,5 +1,5 @@
 case class Token(val text:String, val pos:String, val chunk:String)
-case class Sentence(val Tokens: Seq[Token])
+case class Sentence(val tokens: Seq[Token])
 object Tokenizer {
   import opennlp.tools.sentdetect._
   import opennlp.tools.tokenize._
